@@ -10,16 +10,29 @@ img{
 /*-- FONT --*/
 a{
 text-decoration: none;
+color: inherit;
 }
-h3, p {
+body{
   font-family: 'Playfair Display', serif;
+  color: #95989A;
 }
-
-h3 {
-  text-transform: uppercase;
-}
-H1, H2 {
+h1, h2 {
   font-family: 'Satisfy', cursive;
+}
+h1{
+  color:#fff;
+  position: absolute;
+  bottom: .8vh;
+  right: 5vw;
+  font-size: 6rem;
+}
+h2{
+  color: #000;
+  font-size: 4.5rem;
+}
+h3, {
+  text-transform: uppercase;
+  color: #000;
 }
 
 /*  HELPER */
@@ -27,14 +40,29 @@ H1, H2 {
   text-align: center;
 }
 
-[class*="bg"]{
-  background-position: center;
-  background-size: cover;
+.img-circle {
+    border-radius: 50%;
+  }
+
+  [class*="bg"] {
+    background-position: center;
+    background-size: cover;
+
+  }
+
+  .blog   [class*="bg"],.navsec [class*="bg"] {
+    text-align: center;
+    min-height: 50vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9px 0;
 }
 
 .button {
   background-color: rgba(255, 255, 255, 0.56);
-  border: 2px solid #95989A;
+  border: 1px solid #95989A;
   margin:0 5px;
   padding: 5px;
   color: #000;
@@ -43,12 +71,17 @@ H1, H2 {
   display: inline-block;
 }
 
+section, footer{
+  padding: 3%;
+}
 
-/*     header    */
+
+/*-- HEADER --*/
 .home-bg {
   background-image: url(images/homeheader.JPG);
   min-height: 80vh;
   background-position: 1% 50%;
+  position: relative;
 }
 header svg {
     width: 43px;
@@ -58,14 +91,72 @@ header svg {
       padding: 1% 3%;
   }
 
-
-.img-circle {
-    border-radius: 50%;
+/*-- SUBSCRIBE SECTION --*/
+.subscribe {
+  min-height: 50vh;
+  background-color: #D7E8F4;
+  align-content: center;
 }
+.subscribe p {
+  font-size: 1.2rem;
+}
+.subscribe input{
+  -webkit-appearance: none;
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: .8rem;
+  margin: 5px auto;
+  width: 40vw;
+  height: 5vh;
+}
+
+input[type="submit"]{
+    width: 10vw;
+}
+
+/*-- BACKGROUND IMAGES --*/
+.blog-1-bg {
+  background-image: url(images/gilinav.JPG);
+}
+.blog-2-bg {
+    background-image: url(images/feelinglostnav.png);
+}
+.blog-3-bg {
+    background-image: url(images/skydivenav.png);
+}
+.blog-bg{
+  background-image: url(images/blognav.jpg);
+}
+.contact-bg{
+  background-image: url(images/contactnav.jpg);
+}
+.services-bg{
+  background-image: url(images/servicesnav.jpg);
+}
+.about-me-bg{
+  background-image: url(images/aboutmenav.jpg);
+}
+
+
+
 
 /*-- FOOTER --*/
 
 footer svg {
   width: 56px;
-
+}
+footer .img-circle{
+    width: 58%;
+    margin: auto;
+    display: block;
+}
+footer {
+  min-height: 40vh;
+  background-color: #D7E8F4;
+}
+footer a {
+  color: #95989A;
+}
+footer p {
+  text-align: center;
 }

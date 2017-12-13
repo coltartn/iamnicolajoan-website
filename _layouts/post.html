@@ -1,0 +1,61 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+
+<!-- WEBSITE START -->
+<body>
+
+  {% include header-blog.html %}
+<section class="padded">
+
+  {{content}}
+
+  <div class="grid-middle-center padded-2">
+    <img src="/images/signiture.png">
+  </div>
+  
+{% include social-sharing-page.html %}
+</section>
+
+<section class="padded">
+<!--- this is the footer for the blog posts -->
+    <div class="grid-middle-center padded-2">
+      <hr class="col-3 line2">
+      <h3>Related Blog Posts</h3>
+      <hr class="col-3 line2">
+    </div>
+    <div class="grid">
+
+      {% for item in site.posts limit:4 %}
+        <div class="col-3 post-preview">
+
+          <div class="bg-image" style="background-image:url('{{item.featured_image}}')"></div>
+          <h3> {{item.title}} </h3>
+
+
+        </div>
+     {% endfor %}
+    </div>
+
+    {% include discus.html %}
+
+</section>
+  {% include subscribe.html %}
+
+  {% include instagram.html %}
+
+  <!-- FOOTER -->
+  {% include footer.html %}
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <a href="#header" onclick="topFunction()" class="topbtn" title="Go to top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+
+</body>
+</html>

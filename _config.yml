@@ -1,3 +1,31 @@
+
+
 permalink: /:year/:title
 
-twitter_username: 
+
+
+twitter_username:
+
+jekyll-archives:
+  enabled:
+    - year
+  permalinks:
+    year: '/:year/'
+  layout: year
+  defaults:
+    title: '/:year/'
+
+categories:
+  - lifestyle
+  - travel
+  - food
+
+paginate: 6
+
+paginate_path:  "/blog/page:num"
+
+
+autopages:
+  categories:
+    layouts: cat.html
+    permalink: '/categories/:cat'

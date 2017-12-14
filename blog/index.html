@@ -1,0 +1,48 @@
+---
+layout: default
+title: Blog
+banner_image: /images/blog.JPG
+---
+
+<section>
+  <!-- this my loop of most recent blog posts -->
+  <div class="grid-middle-center padded-2">
+    <hr class="col-3 line2">
+    <h3>Recent Blog Posts</h3>
+    <hr class="col-3 line2">
+  </div>
+  <div class="grid">
+
+    {% for item in site.posts limit:6 %}
+
+      <div class="col-6 post-preview padded-2">
+        <a href="{{item.url}}">
+          <h3 class="text-center"> {{item.title}} </h3>
+          <p class="date text-center padded-1-5"> {{item.date | date:"%A %e %B %Y" }} </p>
+          <div class="bg-image" style="background-image:url('{{item.featured_image}}')"></div>
+          <p> {{item.excerpt}} </p>
+        </a>
+          {% include social-sharing.html %}
+    </div>
+
+   {% endfor %}
+   <div class="pagination">
+         {% if paginator.previous_page %}
+         <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+         {% else %}
+         <span class="previous inactive">Previous</span>
+         {% endif %}
+         <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+         {% if paginator.next_page %}
+         <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+         {% else %}
+         <span class="next inactive">Next</span>
+         {% endif %}
+       </div>
+
+</div>
+</section>
+
+  {% include explore-categories.html %}
+
+{% include subscribe.html %}

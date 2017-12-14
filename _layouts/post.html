@@ -1,4 +1,5 @@
 ---
+navclass: post-nav
 ---
 
 <!DOCTYPE html>
@@ -11,38 +12,50 @@
 <body>
 
   {% include header-blog.html %}
-<section class="padded">
+<section class="padded blog-post">
 
   {{content}}
 
   <div class="grid-middle-center padded-2">
     <img src="/images/signiture.png">
   </div>
-  
-{% include social-sharing-page.html %}
+
+  <div class="social-share grid">
+      <p class="col-6"> CATEGORY: {{page.category}} </p>
+      <div class="col-6">
+      <p class="padded-0 text-right"> SHARE:
+      <a href="https://twitter.com/intent/tweet?text={{page.title}}&url={{site.url}}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://facebook.com/sharer.php?u={{site.url}}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url={{site.url}}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      <a href="http://pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&description={{page.title}}" rel="nofollow" target="_blank" title="Share on Facebook"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+      </p>
+    </div>
+  </div>
+
+
 </section>
 
 <section class="padded">
 <!--- this is the footer for the blog posts -->
     <div class="grid-middle-center padded-2">
       <hr class="col-3 line2">
-      <h3>Related Blog Posts</h3>
+      <h3>You may also like</h3>
       <hr class="col-3 line2">
     </div>
     <div class="grid">
 
-      {% for item in site.posts limit:4 %}
+      {% for item in site.categories[page.category] limit:4 %}
         <div class="col-3 post-preview">
 
           <div class="bg-image" style="background-image:url('{{item.featured_image}}')"></div>
           <h3> {{item.title}} </h3>
-
 
         </div>
      {% endfor %}
     </div>
 
     {% include discus.html %}
+    {% include explore-categories.html %}
 
 </section>
   {% include subscribe.html %}

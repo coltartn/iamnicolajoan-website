@@ -1,0 +1,90 @@
+---
+title: Blog
+banner_class: year-bg
+---
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+<!-- WEBSITE START -->
+<body>
+
+{% include header-blog.html %}
+
+  <!-- this my loop of most recent blog posts -->
+  <div class="grid-middle-center padded-2">
+    <hr class="col-3 line2">
+    <h3>{{page.date | date: "%Y"}} Blog Posts </h3>
+    <hr class="col-3 line2">
+  </div>
+  <div class="grid">
+
+    {% for item in page.posts %}
+
+      <div class="col-4 post-preview padded-2">
+        <a href="{{item.url}}">
+          <h3 class="text-center"> {{item.title}} </h3>
+          <p class="date text-center padded-1-5"> {{item.date | date:"%A %e %B %Y" }} </p>
+          <div class="bg-image" style="background-image:url('{{item.featured_image}}')"></div>
+          <p> {{item.excerpt}} </p>
+        </a>
+          {% include social-sharing.html %}
+    </div>
+
+   {% endfor %}
+
+</div>
+</section>
+
+<section>
+<div class="grid-middle-center padded-2">
+  <hr class="col-3 line2">
+  <h3>explore</h3>
+  <hr class="col-3 line2">
+</div>
+
+
+<section class="grid-center-middle navsec">
+  <div class="col-3">
+    <a href="/lifestyle">
+      <div class="lifestyle-bg">
+        <h3 class="button" >Lifestyle</h3>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-3">
+    <a href="/travel">
+      <div class="travel-bg">
+        <h3 class="button" >travel</h3>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-3">
+    <a href="/food">
+      <div class="food-bg">
+        <h3 class="button" >Food</h3>
+      </div>
+    </a>
+  </div>
+</section>
+</section>
+
+{% include subscribe.html %}
+
+
+  {% include instagram.html %}
+
+  <!-- FOOTER -->
+  {% include footer.html %}
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <a href="#header" onclick="topFunction()" class="topbtn" title="Go to top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+
+</body>
+</html>

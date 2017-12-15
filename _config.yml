@@ -20,13 +20,13 @@ categories:
   - travel
   - food
 
-paginate: 6
 
-paginate_path:  "/blog/page:num"
+pagination:
+  enabled: true
+  layout: cat2
+  collection: posts
+  per-page: 6
+  permalink: '/:num/'
+  title:
 
-
-autopages:
-  categories:
-    layouts: cat
-    title: iAmNicolaJoan Blog | :cat
-    permalink: '/categories/:cat'
+category: lifestyle, travel, food

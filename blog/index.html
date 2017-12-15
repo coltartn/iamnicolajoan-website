@@ -2,6 +2,9 @@
 layout: default
 title: Blog
 banner_image: /images/blog.JPG
+pagination:
+  enabled: true
+  
 ---
 
 <section>
@@ -13,7 +16,7 @@ banner_image: /images/blog.JPG
   </div>
   <div class="grid">
 
-    {% for item in site.posts limit:6 %}
+    {% for item in paginator.posts limit:6 %}
 
       <div class="col-6_sm-12 post-preview padded-2">
         <a href="{{item.url}}">

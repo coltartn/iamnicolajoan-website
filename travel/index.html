@@ -1,0 +1,55 @@
+---
+layout: default
+title: Travel
+banner_image: /images/blog.JPG
+pagination:
+  enabled: true
+  category: travel
+---
+
+<section>
+  <!-- this my loop of most recent blog posts -->
+  <div class="grid-middle-center padded-2">
+    <hr class="col-3_sm-12 line2">
+    <h3>Recent Blog Posts</h3>
+    <hr class="col-3_sm-12 line2">
+  </div>
+  <div class="grid">
+
+    {% for item in paginator.posts limit:6 %}
+
+      <div class="col-6_sm-12 post-preview padded-2">
+        <a href="{{item.url}}">
+          <h3 class="text-center"> {{item.title}} </h3>
+          <p class="date text-center padded-1-5"> {{item.date | date:"%A %e %B %Y" }} </p>
+          <div class="bg-image" style="background-image:url('{{item.featured_image}}')"></div>
+          <p> {{item.excerpt}} </p>
+        </a>
+          {% include social-sharing.html %}
+    </div>
+
+   {% endfor %}
+ </div>
+   <div class="pagination grid-spaceBetween">
+     <div class="col-3">
+         {% if paginator.previous_page %}
+         <a href="{{ paginator.previous_page_path }}" class="previous button">Previous</a>
+         {% else %}
+         <span class="previous button inactive">Previous</span>
+         {% endif %}
+       </div>
+         <span class="page_number text-center col-3">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <div class="col-3 text-right">
+         {% if paginator.next_page %}
+         <a href="{{ paginator.next_page_path }}" class="next button">Next</a>
+         {% else %}
+         <span class="next inactive button">Next</span>
+         {% endif %}
+       </div>
+
+</div>
+</section>
+
+  {% include explore-categories.html %}
+
+{% include subscribe.html %}

@@ -26,17 +26,21 @@ banner_image: /images/blog.JPG
     </div>
 
    {% endfor %}
-   <div class="pagination">
+ </div>
+   <div class="pagination grid-spaceBetween">
+     <div class="col-3">
          {% if paginator.previous_page %}
-         <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+         <a href="{{ paginator.previous_page_path }}" class="previous button">Previous</a>
          {% else %}
-         <span class="previous inactive">Previous</span>
+         <span class="previous button inactive">Previous</span>
          {% endif %}
-         <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+       </div>
+         <span class="page_number text-center col-3">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <div class="col-3 text-right">
          {% if paginator.next_page %}
-         <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+         <a href="{{ paginator.next_page_path }}" class="next button">Next</a>
          {% else %}
-         <span class="next inactive">Next</span>
+         <span class="next inactive button">Next</span>
          {% endif %}
        </div>
 

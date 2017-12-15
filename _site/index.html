@@ -3,6 +3,8 @@
 
   <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>iAmNicolaJoan | A lifestyle and travel blog</title>
 
   <!-- LINK TO GRIDLEX -->
@@ -31,13 +33,40 @@
 
   <!-- TOP BANNER -->
   <header id="header" class="banner-bg" style="background-image:url(/images/homeheader.JPG)">
-    <nav>
+    <nav class="mobile-hide">
         <a href="/index">Home</a> /
         <a href="/blog">Blog</a> /
         <a href="/about">About</a> /
         <a href="/services">Work with me</a> /
         <a href="/contact">Contact</a>
     </nav>
+
+  <nav>
+  <div class="burger-button mobile-show">
+      <span class="burger-top"></span>
+      <span class="burger-middle"></span>
+      <span class="burger-bottom"></span>
+  </div>
+   <div class="burger-menu">
+    <ul>
+      <li>
+      <a href="/index">Home</a>
+      </li>
+      <li>
+      <a href="/blog">Blog</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/services">Work with me</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <!-- TITLE -->
     <h1> iAmNicolaJoan </h1>
@@ -87,7 +116,7 @@
 
     <!-- 2nd PAGE-IMAGE NAVS -->
 <section class="grid-center-middle navsec">
-  <div class="col-3">
+  <div class="col-3_sm-12">
     <a href="blog">
       <div class="blog-bg">
         <h3 class="button" >Blog</h3>
@@ -95,20 +124,20 @@
     </a>
   </div>
 
-  <div class="col-3">
-    <a href="contact">
+  <div class="col-3_sm-12 navsec-mobile-fix">
+    <a class="mobile-navsec" href="contact">
       <div class="contact-bg">
         <h3 class="button" >Contact</h3>
       </div>
     </a>
-    <a href="services">
+    <a class="mobile-navsec" href="services">
       <div class="services-bg">
         <h3 class="button" >Services</h3>
       </div>
     </a>
   </div>
 
-  <div class="col-3">
+  <div class="col-3_sm-12">
     <a href="About-me">
       <div class="about-me-bg">
         <h3 class="button" >About Me</h3>
@@ -140,30 +169,30 @@
     </div>
 <!-- BLOG LINKS BG IMAGE -->
     <div class="grid">
-      <div class="col-4 padded-2">
+      <div class="col-4_sm-12 padded-2">
         <a href="post">
           <div class="blog-1-bg">
             <h3 class="button" >Stunning Gili Islands</h3>
           </div>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <p class="mobile-hide"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </a>
       </div>
 
-      <div class="col-4 padded-2">
+      <div class="col-4_sm-12 padded-2">
         <a href="post.2">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <p class="mobile-hide"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           <div class="blog-2-bg">
             <h3 class="button" >When You're feeling lost</h3>
           </div>
         </a>
       </div>
 
-      <div class="col-4 padded-2">
+      <div class="col-4_sm-12 padded-2">
         <a href="post.3">
           <div class="blog-3-bg">
             <h3 class="button">Skydive Australia</h3>
           </div>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <p class="mobile-hide"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </a>
       </div>
     </div>
@@ -239,9 +268,9 @@
     <!-- BLOG ARCHIVE -->
     <div class="col-3 archive">
       <div class="grid-middle">
-      <hr class="col-2 linefooter">
+      <hr class="col-2_sm-12 linefooter">
       <p class="col-6 padded-0 ">BLOG ARCHIVE</p>
-      <hr class="col-2 linefooter">
+      <hr class="col-2_sm-12 linefooter">
         </div>
       <ul>
         <li><a href="/2017">2017</a></li>
@@ -260,9 +289,10 @@
   <a href="#header" onclick="topFunction()" class="topbtn" title="Go to top">
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
   </a>
+
+
 <!-- JQUERY AND PLUGINS HERE  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
 
 <script src="/main.js"></script>
 

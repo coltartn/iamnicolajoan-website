@@ -138,7 +138,7 @@ hr.line2{
 .banner-bg {
   background-color: rgb(90,90,95);
   min-height: 80vh;
-  background-position: 1% 50%;
+  background-position: center;
   position: relative;
 }
 header svg {
@@ -149,6 +149,16 @@ header .social{
   position: absolute;
   bottom: .8vh;
   right: 1vw;
+}
+
+.social a:hover,
+.sidebars a:hover  {
+  position: relative;
+  top: -2px;
+}
+
+.hover-effect a:hover{
+  color: rgb(120,120,120);
 }
 
 header nav{
@@ -326,6 +336,13 @@ footer{
 .archive ul{
   font-size: 1.3rem;
 }
+.archive a{
+  transition: .5s;
+}
+
+.archive a:hover{
+  color: black;
+}
 
 .fa{
   padding: 2px;
@@ -414,6 +431,10 @@ footer{
   white-space:nowrap;
 }
 
+.burger-menu a:hover {
+  color: black;
+}
+
 .burger-menu li{list-style:none}
 /*
 .dropdown-nav:hover .dropdown-content {
@@ -427,35 +448,45 @@ footer{
 
 
 @media (max-width:769px) {
-  h1{
-  font-size: 15vw;
-  }
+        h1{
+        font-size: 15vw;
+        }
 
-.mobile-show{
-  display: block;
-}
-.mobile-hide{
-  display: none;
-}
+      .mobile-show{
+        display: block;
+      }
+      .mobile-hide{
+        display: none;
+      }
 
-.navsec .mobile-navsec{
-    margin: 0;
-    padding: 0 0 6%;
-    display: block;
-  }
-.navsec .contact-bg{
-    min-height: 50vh;
-  }
-.navsec-mobile-fix{
-  padding-bottom: 0;
-}
+      .navsec .mobile-navsec{
+          margin: 0;
+          padding: 0 0 6%;
+          display: block;
+        }
+      .navsec .contact-bg{
+          min-height: 50vh;
+        }
+      .navsec-mobile-fix{
+        padding-bottom: 0;
+      }
 
-input, textarea {
-  width: 100%;
-}
-hr{
-  max-width: 15%;
-}
-
+      input, textarea {
+        width: 100%;
+      }
+      hr{
+        max-width: 15%;
+      }
+      .mobile-center{
+        text-align: center;
+      }
+      footer .sidebars {
+        display: flex;
+        justify-content: center;
+      }
+      footer .sidebars svg{
+        width:50px;
+        padding:5px;
+      }
 
 } /* end media query */

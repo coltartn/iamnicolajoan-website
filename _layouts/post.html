@@ -38,17 +38,17 @@ navclass: post-nav
 <section class="padded">
 <!--- this is the footer for the blog posts -->
     <div class="grid-middle-center padded-2">
-      <hr class="col-3 line2">
+      <hr class="col-3_sm-12 line2">
       <h3>You may also like</h3>
-      <hr class="col-3 line2">
+      <hr class="col-3_sm-12 line2">
     </div>
     <div class="grid">
 
       {% for item in site.categories[page.category] limit:4 %}
-        <div class="col-3 post-preview">
+        <div class="col-3_sm-6 post-preview">
 
           <div class="bg-image" style="background-image:url('{{item.featured_image}}')"></div>
-          <h3> {{item.title}} </h3>
+          <h3 class="mobile-center"> {{item.title}} </h3>
 
         </div>
      {% endfor %}

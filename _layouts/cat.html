@@ -15,7 +15,7 @@ banner_class: home-bg
     <hr class="col-3_sm-12 line2">
   </div>
   <div class="grid">
-    {% for item in site.categories[page.category] limit:6 %}
+    {% for item in site.categories[page.category] %}
 
       <div class="col-6_sm-12 post-preview padded-2">
         <a href="{{item.url}}">
@@ -28,6 +28,26 @@ banner_class: home-bg
     </div>
 
    {% endfor %}
+
+ </div>
+   <!-- <div class="pagination grid-spaceBetween">
+     <div class="col-3">
+         {% if paginator.previous_page %}
+         <a href="{{ paginator.previous_page_path }}" class="previous button">Previous</a>
+         {% else %}
+         <span class="previous button inactive">Previous</span>
+         {% endif %}
+       </div>
+         <span class="page_number text-center col-3">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <div class="col-3 text-right">
+         {% if paginator.next_page %}
+         <a href="{{ paginator.next_page_path }}" class="next button">Next</a>
+         {% else %}
+         <span class="next inactive button">Next</span>
+         {% endif %}
+       </div>
+
+</div> -->
 
 </div>
 </section>

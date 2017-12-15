@@ -1,0 +1,6 @@
+
+tags:
+  layouts:
+    - 'cat.html'
+  title: ':tag'
+  permalink: '/blog/:tag'

@@ -27,5 +27,6 @@ paginate_path:  "/blog/page:num"
 
 autopages:
   categories:
-    layouts: cat.html
+    layouts: cat
+    title: iAmNicolaJoan Blog | :cat
     permalink: '/categories/:cat'
